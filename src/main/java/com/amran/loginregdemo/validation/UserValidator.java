@@ -8,7 +8,7 @@ import org.springframework.validation.Validator;
  * @author:Md.Amran-Hossain
  * @Date:11/02/2018
  */
-public class UserValidator extends Validator{
+public class UserValidator implements Validator {
     @Override
     public boolean supports(Class<?> clazz) {
         return false;

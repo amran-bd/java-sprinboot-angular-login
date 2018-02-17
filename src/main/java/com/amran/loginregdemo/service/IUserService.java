@@ -2,6 +2,7 @@ package com.amran.loginregdemo.service;
 
 import com.amran.loginregdemo.exception.UserAlreadyExistException;
 import com.amran.loginregdemo.persistence.model.User;
+import com.amran.loginregdemo.web.dto.UserRegisterDto;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  */
 public interface IUserService {
 
-    User registerNewUserAccount() throws UserAlreadyExistException;
+    User registerNewUserAccount(UserRegisterDto registerUserDto) throws UserAlreadyExistException;
 
     User findById(Long id);
 
@@ -20,14 +21,12 @@ public interface IUserService {
 
     void saveUser(User user);
 
-    void updateUser(User user);
-
     void deleteUserById(Long id);
 
     void deleteAllUsers();
 
     List<User> findAllUsers();
 
-    boolean isUserExist(User user);
+    boolean isUserExist(UserRegisterDto userRegisterDto);
 
 }

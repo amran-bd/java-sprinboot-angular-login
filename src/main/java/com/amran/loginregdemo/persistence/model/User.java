@@ -22,6 +22,7 @@ public class User {
     private String gender;
     private Date dob;
     private String password;
+    private String userStatus;
 
     public User() {
         super();
@@ -111,5 +112,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
     }
 }
