@@ -1,4 +1,4 @@
-angular.module('crudApp').controller('UserController',
+angular.module('loginRegDemoExample').controller('UserController',
     ['UserService', '$scope',  function( UserService, $scope) {
 
         var self = this;
