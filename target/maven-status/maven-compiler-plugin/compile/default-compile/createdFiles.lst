@@ -21,5 +21,4 @@ com\amran\loginregdemo\security\ActiveUserStore.class
 com\amran\loginregdemo\validation\PasswordConstraintValidator.class
 com\amran\loginregdemo\validation\UserValidator.class
 com\amran\loginregdemo\config\PersistenceJPAConfig.class
-com\amran\loginregdemo\controller\BaseController.class
 com\amran\loginregdemo\handler\CustomAuthenticationSuccessHandler.class

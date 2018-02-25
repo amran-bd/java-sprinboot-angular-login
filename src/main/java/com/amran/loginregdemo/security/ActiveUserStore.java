@@ -1,8 +1,11 @@
 package com.amran.loginregdemo.security;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ActiveUserStore {
 
     public List<String> users;
