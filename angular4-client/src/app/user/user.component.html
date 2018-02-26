@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<ul>
+  <li *ngFor="let usr of users"
+      [class.selected]="usr === selectedUser" (click)="onSelect(usr)">
+    <h4>{{usr.id}} - {{usr.firstName}} {{usr.lastName}}</h4>
+  </li>
+</ul>
+<user-detail [user]="selectedUser"></user-detail>
+</body>
+</html>

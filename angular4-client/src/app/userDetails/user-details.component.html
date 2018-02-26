@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+</head>
+<body>
+<div *ngIf="user">
+  <h2>{{user.firstName}} details:</h2>
+  <div>
+    <label>id: </label> {{user.id}}
+  </div>
+  <div>
+    <label>First Name: </label> {{user.firstName}}
+  </div>
+  <div>
+    <label>Last Name: </label> {{user.lastName}}
+  </div>
+  <div>
+    <label>Email: </label> {{user.email}}
+  </div>
+  <div>
+    <label>Mobile Number: </label> {{user.mobile}}
+  </div>
+
+  <button class="btn btn-danger" (click)="delete()">Delete</button>
+</div>
+</body>
+</html>
