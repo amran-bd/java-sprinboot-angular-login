@@ -1,1 +1,1 @@
-# j2EE-sprinboot,Spring-Security, JPA, REST- angular-login
+# J2EE-Spring boot,Spring-Security, JPA, REST- angular-login
