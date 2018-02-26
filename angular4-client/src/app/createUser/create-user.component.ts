@@ -36,3 +36,4 @@ export class CreateUserComponent implements OnInit {
     this.location.back();
   }
 }
+export class style{}

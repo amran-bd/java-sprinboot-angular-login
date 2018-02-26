@@ -26,3 +26,4 @@ export class UserComponent implements OnInit {
     this.selectedUser = usr;
   }
 }
+export class style{}

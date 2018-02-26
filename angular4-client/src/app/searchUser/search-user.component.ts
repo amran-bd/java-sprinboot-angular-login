@@ -27,3 +27,4 @@ export class SearchUserComponent implements OnInit {
   }
 
 }
+export class style{}
