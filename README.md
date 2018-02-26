@@ -1,5 +1,5 @@
 # J2EE-Spring boot,Spring-Security, JPA, REST- angular-login
-This is simple application based on angular and rest-api wher user can communication over API from UI to core engine. 
+This is simple application Registration and Login based on angular and rest-api wher user can communication over API from UI to core engine. 
 
 Technologies uses:
  -- Java (1.8), J2EE
