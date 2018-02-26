@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './app.module.user';
-import { DataService } from './app.data.service';
+import { User } from '../app.module.user';
+import { DataService } from '../app.data.service';
 
 @Component({
   selector: 'customers-list',

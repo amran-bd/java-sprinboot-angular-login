@@ -1,5 +1,5 @@
-import { User} from './app.module.user';
-import {DataService} from './app.data.service';
+import { User} from '../app.module.user';
+import {DataService} from '../app.data.service';
 import {Component, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
 
