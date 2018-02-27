@@ -6,6 +6,7 @@ import com.amran.loginregdemo.persistence.repository.UserRepository;
 import com.amran.loginregdemo.web.dto.UserRegisterDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,12 +19,12 @@ import java.util.Set;
  * @author:Md.Amran-Hossain
  * @Date:11/02/2018
  */
-@Service("userService")
+@Component
 @Transactional
 public class UserService implements IUserService{
 
     @Autowired
-    private UserRepository repository;
+    private UserRepository userRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -37,37 +38,37 @@ public class UserService implements IUserService{
         user.setEmail(registerUserDto.getEmail());
         user.setUsername(registerUserDto.getEmail());
         user.setUserStatus("I");
-        return repository.save(user);
+        return userRepository.save(user);
     }
 
     @Override
     public User findById(Long id) {
-        return repository.findById(id);
+        return userRepository.findById(id);
     }
 
     @Override
     public User findByName(String name) {
-        return repository.findByUsername(name);
+        return userRepository.findByUsername(name);
     }
 
     @Override
     public void saveUser(User user) {
-        repository.save(user);
+        userRepository.save(user);
     }
 
     @Override
     public void deleteUserById(Long id) {
-        repository.delete(id);
+        userRepository.delete(id);
     }
 
     @Override
     public void deleteAllUsers() {
-        repository.deleteAll();
+        userRepository.deleteAll();
     }
 
     @Override
     public List<User> findAllUsers() {
-        return repository.findAll();
+        return userRepository.findAll();
     }
 
     @Override
