@@ -9,6 +9,7 @@ D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\sec
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\validation\UserValidator.java
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\persistence\CustomMySQLDialect.java
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\security\MyLogoutSuccessHandler.java
+D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\security\SecSecurityConfig.java
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\config\MvcConfig.java
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\web\error\ApiError.java
 D:\PROJECT\java-sprinboot-angular-login\src\main\java\com\amran\loginregdemo\web\controller\UserController.java

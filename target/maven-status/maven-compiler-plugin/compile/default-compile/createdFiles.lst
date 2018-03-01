@@ -10,6 +10,7 @@ com\amran\loginregdemo\Application.class
 com\amran\loginregdemo\exception\UserAlreadyExistException.class
 com\amran\loginregdemo\persistence\repository\UserRepository.class
 com\amran\loginregdemo\config\SetupDataLoader.class
+com\amran\loginregdemo\security\SecSecurityConfig.class
 com\amran\loginregdemo\util\OnRegistrationCompleteEvent.class
 com\amran\loginregdemo\web\dto\UserRegisterDto.class
 com\amran\loginregdemo\web\util\CommonResponse.class

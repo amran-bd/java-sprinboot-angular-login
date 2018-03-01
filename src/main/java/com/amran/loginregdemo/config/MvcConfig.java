@@ -14,9 +14,9 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 import java.util.Locale;
 
-@Configuration
-@ComponentScan(basePackages = { "com.amran.loginregdemo.web" })
-@EnableWebMvc
+//@Configuration
+//@ComponentScan(basePackages = { "com.amran.loginregdemo.web" })
+//@EnableWebMvc
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
     public MvcConfig() {
@@ -25,26 +25,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         super.addViewControllers(registry);
-        registry.addViewController("/").setViewName("forward:/login");
         registry.addViewController("/login");
-        registry.addViewController("/customLogin");
-        registry.addViewController("/registration.html");
-        registry.addViewController("/registrationCaptcha.html");
         registry.addViewController("/logout.html");
-        registry.addViewController("/homepage.html");
-        registry.addViewController("/expiredAccount.html");
-        registry.addViewController("/badUser.html");
-        registry.addViewController("/emailError.html");
         registry.addViewController("/home.html");
-        registry.addViewController("/invalidSession.html");
-        registry.addViewController("/console.html");
-        registry.addViewController("/admin.html");
-        registry.addViewController("/successRegister.html");
-        registry.addViewController("/forgetPassword.html");
-        registry.addViewController("/updatePassword.html");
-        registry.addViewController("/changePassword.html");
         registry.addViewController("/users.html");
-        registry.addViewController("/qrcode.html");
     }
 
     @Override
@@ -70,24 +54,12 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(localeChangeInterceptor);
     }
 
-    // beans
-
     @Bean
     public LocaleResolver localeResolver() {
         final CookieLocaleResolver cookieLocaleResolver = new CookieLocaleResolver();
         cookieLocaleResolver.setDefaultLocale(Locale.ENGLISH);
         return cookieLocaleResolver;
     }
-
-    // @Bean
-    // public MessageSource messageSource() {
-    // final ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-    // messageSource.setBasename("classpath:messages");
-    // messageSource.setUseCodeAsDefaultMessage(true);
-    // messageSource.setDefaultEncoding("UTF-8");
-    // messageSource.setCacheSeconds(0);
-    // return messageSource;
-    // }
 
     @Bean
     public EmailValidator usernameValidator() {

@@ -8,15 +8,10 @@
 >
 
     <http use-expressions="true">
-        <intercept-url pattern="/configuration/**" access="permitAll"/>
-        <intercept-url pattern="/resources/**" access="permitAll"/>
         <intercept-url pattern="/login*" access="permitAll"/>
         <intercept-url pattern="/logout*" access="permitAll"/>
-        <intercept-url pattern="/user/registration*" access="permitAll"/>
-        <intercept-url pattern="/registration*" access="permitAll"/>
+        <intercept-url pattern="/user/**" access="permitAll"/>
 
-        <intercept-url pattern="/emailError*" access="permitAll"/>
-        <intercept-url pattern="/resources/**" access="permitAll"/>
         <intercept-url pattern="/invalidSession*" access="isAnonymous()"/>
         <intercept-url pattern="/**" access="isAuthenticated()"/>
         
@@ -31,7 +26,22 @@
         <logout invalidate-session="false" logout-success-url="/logoutPage?logSucc=true" delete-cookies="JSESSIONID"/>
     </http>
 
-    
+    <authentication-manager>
+        <authentication-provider ref="authProvider"/>
+    </authentication-manager>
+
+    <authentication-manager>
+        <authentication-provider>
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
+    </authentication-manager>
+
+
+    <beans:bean id="authProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <beans:property name="userDetailsService" ref="userDetailsService"/>
+        <beans:property name="passwordEncoder" ref="passwordEncoder"/>
+    </beans:bean>
+
     <beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <beans:constructor-arg value="11"/>
     </beans:bean>

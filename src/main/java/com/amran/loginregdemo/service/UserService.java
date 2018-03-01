@@ -19,22 +19,22 @@ import java.util.Set;
  * @author:Md.Amran-Hossain
  * @Date:11/02/2018
  */
-@Component
+@Service
 @Transactional
 public class UserService implements IUserService{
 
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     @Override
     public User registerNewUserAccount(UserRegisterDto registerUserDto) throws UserAlreadyExistException {
         final User user = new User();
         user.setFirstName(registerUserDto.getFirstName());
         user.setLastName(registerUserDto.getLastName());
-        user.setPassword(passwordEncoder.encode(registerUserDto.getPassword()));
+        //user.setPassword(passwordEncoder.encode(registerUserDto.getPassword()));
         user.setEmail(registerUserDto.getEmail());
         user.setUsername(registerUserDto.getEmail());
         user.setUserStatus("I");
