@@ -1,5 +1,6 @@
 com\amran\loginregdemo\validation\PasswordMatchesValidator.class
 com\amran\loginregdemo\web\controller\UserController.class
+com\amran\loginregdemo\config\ApplicationWebMvcConfig.class
 com\amran\loginregdemo\handler\CustomAuthenticationFailureHandler.class
 com\amran\loginregdemo\validation\ValidPassword.class
 com\amran\loginregdemo\validation\PasswordMatches.class
@@ -16,7 +17,6 @@ com\amran\loginregdemo\web\dto\UserRegisterDto.class
 com\amran\loginregdemo\web\util\CommonResponse.class
 com\amran\loginregdemo\service\UserService.class
 com\amran\loginregdemo\web\error\ApiError.class
-com\amran\loginregdemo\config\ServiceConfig.class
 com\amran\loginregdemo\persistence\model\User.class
 com\amran\loginregdemo\security\MyLogoutSuccessHandler.class
 com\amran\loginregdemo\security\ActiveUserStore.class
@@ -24,4 +24,3 @@ com\amran\loginregdemo\validation\PasswordConstraintValidator.class
 com\amran\loginregdemo\validation\UserValidator.class
 com\amran\loginregdemo\config\PersistenceJPAConfig.class
 com\amran\loginregdemo\handler\CustomAuthenticationSuccessHandler.class
-com\amran\loginregdemo\config\MvcConfig.class

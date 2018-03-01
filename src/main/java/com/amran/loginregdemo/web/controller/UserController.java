@@ -29,7 +29,7 @@ import java.util.Locale;
  * @Date:11/02/2018
  */
 @RestController
-@RequestMapping(path = "/api/user/",produces = MediaType.APPLICATION_JSON_VALUE )
+@RequestMapping(path = "/",produces = MediaType.APPLICATION_JSON_VALUE )
 public class UserController implements Serializable{
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
@@ -41,6 +41,11 @@ public class UserController implements Serializable{
 
     @Autowired
     private Gson gson;
+
+    @RequestMapping("/test")
+    public String home(){
+        return "Hello World!";
+    }
 
     @RequestMapping(value = "/createUser",  method = RequestMethod.POST)
     public ResponseEntity<Object> createUser(@RequestBody @Valid UserRegisterDto userRegisterDto){
