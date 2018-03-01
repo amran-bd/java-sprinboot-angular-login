@@ -24,11 +24,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
-        super.addViewControllers(registry);
-        registry.addViewController("/login");
-        registry.addViewController("/logout.html");
-        registry.addViewController("/home.html");
-        registry.addViewController("/users.html");
     }
 
     @Override
@@ -39,10 +34,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/", "/resources/");
-
-        registry.addResourceHandler("swagger-ui.html")
-                .addResourceLocations("classpath:/META-INF/resources/");
-
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }

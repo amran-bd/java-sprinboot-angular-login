@@ -8,18 +8,6 @@
 >
 
     <http use-expressions="true">
-        <intercept-url pattern="/configuration/**" access="permitAll"/>
-        <intercept-url pattern="/resources/**" access="permitAll"/>
-        <intercept-url pattern="/login*" access="permitAll"/>
-        <intercept-url pattern="/logout*" access="permitAll"/>
-        <intercept-url pattern="/user/registration*" access="permitAll"/>
-        <intercept-url pattern="/registration*" access="permitAll"/>
-
-        <intercept-url pattern="/emailError*" access="permitAll"/>
-        <intercept-url pattern="/resources/**" access="permitAll"/>
-        <intercept-url pattern="/invalidSession*" access="isAnonymous()"/>
-        <intercept-url pattern="/**" access="isAuthenticated()"/>
-        
         <csrf disabled="true"/>
 
             
@@ -33,6 +21,12 @@
 
     <authentication-manager>
         <authentication-provider ref="authProvider"/>
+    </authentication-manager>
+
+    <authentication-manager>
+        <authentication-provider>
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
     </authentication-manager>
 
 
