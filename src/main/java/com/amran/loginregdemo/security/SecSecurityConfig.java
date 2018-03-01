@@ -45,7 +45,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
                 // we don't need CSRF because our token is invulnerable
                 .csrf().disable()
                 // All urls must be authenticated (filter for token always fires (/api/**)
-                .authorizeRequests().antMatchers("/api/**").authenticated()
+                .authorizeRequests().antMatchers("/api/**").permitAll()
                 .and()
                 // Call our errorHandler if authentication/authorisation fails
                 .exceptionHandling()

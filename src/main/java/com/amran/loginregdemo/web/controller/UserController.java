@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -30,7 +31,7 @@ import java.util.Locale;
  */
 @RestController
 @RequestMapping(path = "/",produces = MediaType.APPLICATION_JSON_VALUE )
-public class UserController implements Serializable{
+public class UserController{
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
     @Autowired
@@ -44,7 +45,7 @@ public class UserController implements Serializable{
 
     @RequestMapping("/test")
     public String home(){
-        return "Hello World!";
+        return gson.toJson("Hello World!");
     }
 
     @RequestMapping(value = "/createUser",  method = RequestMethod.POST)
@@ -54,4 +55,5 @@ public class UserController implements Serializable{
         final ApiError apiError = new ApiError(HttpStatus.EXPECTATION_FAILED, "User creation failed.", "error occurred");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
+
 }

@@ -8,7 +8,7 @@
 >
 
     <http use-expressions="true">
-        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <intercept-url pattern="/" access="permitAll" />
         <csrf disabled="true"/>
 
             

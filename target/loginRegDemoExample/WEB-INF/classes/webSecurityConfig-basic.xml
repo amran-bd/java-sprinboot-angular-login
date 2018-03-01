@@ -8,7 +8,7 @@
 >
 
 	<http use-expressions="true">
-		<intercept-url pattern="/**" access="isAuthenticated()" />
+		<intercept-url pattern="/" access="permitAll" />
 
 		<session-management invalid-session-url="/invalidSession.html"
 			session-fixation-protection="none" />
