@@ -9,17 +9,17 @@ import {DataService} from '../data.service';
 })
 
 export class SearchUserComponent implements OnInit {
-  lastName: string;
+  id: number;
   users: User[];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.lastName = "";
+    this.id;
   }
 
   private searchUsers() {
-    this.dataService.getUserByLastName(this.lastName).then(users => this.users = users);
+    this.dataService.getUserById(this.id).then(users => this.users = users);
   }
 
   onSubmit() {
