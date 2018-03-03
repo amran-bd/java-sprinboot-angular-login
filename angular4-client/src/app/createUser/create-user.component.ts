@@ -10,7 +10,7 @@ import {Location} from '@angular/common';
 })
 
 export class CreateUserComponent implements OnInit {
-  user = new User;
+  user = new User(1,"Amran","Hossain","amrancse930@gmail.com","01817126345");
   submitted = false;
   constructor(private dataService: DataService,
               private location: Location) {}
@@ -20,7 +20,7 @@ export class CreateUserComponent implements OnInit {
 
   newUser(): void {
     this.submitted = false;
-    this.user = new User();
+    this.user =  new User(1,"Amran","Hossain","amrancse930@gmail.com","01817126345");
   }
 
   private save(): void {

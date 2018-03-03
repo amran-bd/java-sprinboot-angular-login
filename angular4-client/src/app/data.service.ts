@@ -8,7 +8,7 @@ import { User } from './user';
 @Injectable()
 export class DataService {
 
-  private userUrl = 'app.module.user';  // URL to web API
+  private userUrl = 'http://localhost:8181/users';  // URL to web API
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) {}

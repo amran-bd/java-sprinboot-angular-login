@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'user', pathMatch: 'full'},
   {path: 'user', component: UserComponent},
   {path: 'add', component: CreateUserComponent},
-  {path: 'findbylastname', component: SearchUserComponent},
+  {path: 'user/edit/:id', component: SearchUserComponent},
 ];
 
 @NgModule({

@@ -7,12 +7,15 @@ com\amran\loginregdemo\validation\PasswordMatches.class
 com\amran\loginregdemo\security\LoggedUser.class
 com\amran\loginregdemo\service\IUserService.class
 com\amran\loginregdemo\persistence\CustomMySQLDialect.class
+com\amran\loginregdemo\web\mapper\UserMapperImpl.class
 com\amran\loginregdemo\Application.class
 com\amran\loginregdemo\exception\UserAlreadyExistException.class
 com\amran\loginregdemo\persistence\repository\UserRepository.class
 com\amran\loginregdemo\config\SetupDataLoader.class
 com\amran\loginregdemo\security\SecSecurityConfig.class
+com\amran\loginregdemo\web\controller\AuthenticationController.class
 com\amran\loginregdemo\util\OnRegistrationCompleteEvent.class
+com\amran\loginregdemo\web\dto\UserDto.class
 com\amran\loginregdemo\web\dto\UserRegisterDto.class
 com\amran\loginregdemo\web\util\CommonResponse.class
 com\amran\loginregdemo\service\UserService.class
@@ -23,4 +26,5 @@ com\amran\loginregdemo\security\ActiveUserStore.class
 com\amran\loginregdemo\validation\PasswordConstraintValidator.class
 com\amran\loginregdemo\validation\UserValidator.class
 com\amran\loginregdemo\config\PersistenceJPAConfig.class
+com\amran\loginregdemo\web\mapper\UserMapper.class
 com\amran\loginregdemo\handler\CustomAuthenticationSuccessHandler.class
